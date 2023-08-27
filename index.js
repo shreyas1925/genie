@@ -1,10 +1,9 @@
 const express = require('express');
 const app = express();
-const Admin = require('./models/admin');
+
 const path = require('path');
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-const session = require('express-session');
+
 var password = encodeURIComponent("test123#");
 mongoose.connect(`mongodb+srv://shreyasshettigar34:${password}@cluster0.sleykif.mongodb.net/`, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {

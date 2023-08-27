@@ -1,5 +1,5 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const notifier = require('node-notifier');
 const session = require('express-session');
 const Admin = require('../../models/admin');
@@ -12,16 +12,12 @@ const Apply_event = require('../../models/apply_events');
 const Event_student = require('../../models/event_students');
 const Drive_student = require('../../models/drive_students');
 const Notifications = require('../../models/notifications');
-const pc = require('../../models/pc');
-const mongoose = require('mongoose');
+
 const route = express.Router();
 
 route.use(express.urlencoded({ extended: true }));
 
 route.use(session({ secret: 'notgoodsecret' }));
-
-
-
 
 route.get('/', (req, res) => {
     res.render('home_head', { title: 'Career geNIE', req: req })
