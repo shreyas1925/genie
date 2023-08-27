@@ -27,14 +27,6 @@ app.use('/images', express.static(path.resolve(__dirname, "images")));
 app.use('/css', express.static(path.resolve(__dirname, "css")));
 app.use('/', careerRouter);
 
-
-
-
-
-
-
-
-
 app.listen(5000, () => {
     console.log("Server setup");
 })
