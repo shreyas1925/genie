@@ -23,7 +23,7 @@ route.get('/', (req, res) => {
     res.render('home_head', { title: 'Career geNIE', req: req })
 })
 route.get('/home_head', async (req, res) => {
-    res.render("home_head", { title: 'Home', req: req })
+    // res.render("home_head", { title: 'Home', req: req })
 })
 
 route.get('/register_index', async (req, res) => {
