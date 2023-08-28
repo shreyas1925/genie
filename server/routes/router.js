@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const notifier = require('node-notifier');
-const session = require('express-session');
+// const session = require('express-session');
 const Admin = require('../../models/admin');
 const Pc = require('../../models/pc');
 const Student = require('../../models/student');
@@ -17,7 +17,7 @@ const route = express.Router();
 
 route.use(express.urlencoded({ extended: true }));
 
-route.use(session({ secret: 'notgoodsecret' }));
+// route.use(session({ secret: 'notgoodsecret' }));
 
 route.get('/', (req, res) => {
     // res.render('home_head', { title: 'Career geNIE', req: req })
