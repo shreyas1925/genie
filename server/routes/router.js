@@ -16,10 +16,10 @@ const Notifications = require('../../models/notifications');
 
 const route = express.Router();
 const password = encodeURIComponent("test123#");
-
+const store = new MongoStore({ url: `mongodb+srv://shreyasshettigar34:${password}@cluster0.sleykif.mongodb.net/` })
 route.use(express.urlencoded({ extended: true }));
 
-route.use(session({ secret: 'notgoodsecret', resave: false, saveUninitialized: false, store: new MongoStore({ url: `mongodb+srv://shreyasshettigar34:${password}@cluster0.sleykif.mongodb.net/` }), }));
+route.use(session({ secret: 'notgoodsecret', resave: false, saveUninitialized: false, store: store }));
 
 route.get('/', (req, res) => {
     // res.render('home_head', { title: 'Career geNIE', req: req })
