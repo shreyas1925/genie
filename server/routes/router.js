@@ -17,7 +17,7 @@ const route = express.Router();
 
 route.use(express.urlencoded({ extended: true }));
 
-route.use(session({ secret: 'notgoodsecret', resave: false }));
+route.use(session({ secret: 'notgoodsecret', resave: false, saveUninitialized: false }));
 
 route.get('/', (req, res) => {
     // res.render('home_head', { title: 'Career geNIE', req: req })
