@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    name: Build
+    name: Test and simulated build
     runs-on: ubuntu-latest
 
     steps:
@@ -25,6 +25,7 @@ jobs:
         run: echo "Simulated build succeeded"
 
   build:
+    name: Docker Image Build
     runs-on: ubuntu-latest
 
     steps:
